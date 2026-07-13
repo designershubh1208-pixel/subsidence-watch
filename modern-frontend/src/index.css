@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+/* ── TT Norms Pro ─────────────────────────────────── */
+@font-face {
+  font-family: 'TT Norms Pro';
+  src: url('/fonts/tt-norms-pro-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Norms Pro';
+  src: url('/fonts/tt-norms-pro-semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Base ─────────────────────────────────────────── */
+html,
+body {
+  font-family: 'TT Norms Pro', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #F5F5F5;
+}
+
+* {
+  font-family: inherit;
+}
+
+/* ── Hero brand marquee ───────────────────────────── */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 22s linear infinite;
+}
+
+/* ── Backers marquee ──────────────────────────────── */
+@keyframes backers-marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.backers-track {
+  display: flex;
+  width: max-content;
+  animation: backers-marquee 30s linear infinite;
+}
+
+/* ── West Bengal map background animations ──────── */
+@keyframes wb-float {
+  0%, 100% { transform: translateY(0px)   translateX(0px); }
+  33%       { transform: translateY(-14px) translateX(-5px); }
+  66%       { transform: translateY(9px)   translateX(5px); }
+}
+
+@keyframes wb-scan {
+  0%   { top: -3px; opacity: 0; }
+  5%   { opacity: 1; }
+  92%  { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+@keyframes wb-pulse {
+  0%, 100% { opacity: 0.8; }
+  50%       { opacity: 0.3; }
+}
+
+.wb-floating  { animation: wb-float  10s ease-in-out infinite; }
+.wb-scanning  { animation: wb-scan    6s linear    infinite; }
+.wb-pulsing   { animation: wb-pulse   3s ease-in-out infinite; }

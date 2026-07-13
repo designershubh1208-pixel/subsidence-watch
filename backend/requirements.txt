@@ -1,0 +1,15 @@
+fastapi==0.111.0
+uvicorn==0.30.1
+pydantic==2.7.4
+pydantic-settings
+SQLAlchemy>=2.0.0
+alembic
+asyncpg
+GeoAlchemy2
+APScheduler
+earthengine-api
+firebase-admin
+slowapi
+cloudinary
+sentry-sdk
+python-dotenv
